@@ -1,0 +1,69 @@
+{{- $root := . -}}
+{{- range $deployments := .Values.deployments }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $deployments.name }}
+  labels:
+    {{- include "meta-helm-chart.labels" $root | nindent 4 }}
+spec:
+  {{- if $root.autoscaling }}{{ if not $root.autoscaling.enabled }}
+  replicas: {{ $deployments.replicaCount }}
+  {{- end }}{{ end }}
+  selector:
+    matchLabels:
+      {{- include "meta-helm-chart.selectorLabels" $root | nindent 6 }}
+  template:
+    metadata:
+      {{- with $deployments.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "meta-helm-chart.selectorLabels" $root | nindent 8 }}
+    spec:
+      {{- with $deployments.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "meta-helm-chart.serviceAccountName" $root }}
+      securityContext:
+        {{- toYaml $deployments.podSecurityContext | nindent 8 }}
+      containers:
+      {{- range $containers := $deployments.containers }}
+        - name: {{ $containers.name }}
+          securityContext:
+            {{- toYaml $containers.securityContext | nindent 12 }}
+          image: "{{ $containers.image.repository }}:{{ $containers.image.tag | default $root.Chart.AppVersion }}"
+          imagePullPolicy: {{ $containers.image.pullPolicy }}
+          ports:
+          {{- range $ports := $containers.ports }}
+            - name: {{ $ports.name }}
+              containerPort: {{ $ports.containerPort }}
+              protocol: {{ $ports.protocol }}
+          {{- end }}
+          {{- with $deployments.livenessProbe }}
+          livenessProbe:
+            {{- toYaml . | nindent 8 }}
+          {{- end }}
+          {{- with $deployments.readinessProbe }}
+          readinessProbe:
+            {{- toYaml . | nindent 8 }}
+          {{- end }}
+          resources:
+            {{- toYaml $deployments.resources | nindent 12 }}
+      {{- end }}
+      {{- with $deployments.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $deployments.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with $deployments.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}
