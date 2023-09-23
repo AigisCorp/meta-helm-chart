@@ -4,9 +4,9 @@ description: A Helm chart for Kubernetes
 type: application
 version: 0.0.1
 maintainers:
-  - name: Eduardo Moreno
+  - name: edumgui
     email: edu.m.guirao@gmail.com
-  - name: Diego Cristóbal
+  - name: dcristobalhMad
     email: diecristher@gmail.com
     url: dcristobalhMad.github.io
 appVersion: "0.0.1"
