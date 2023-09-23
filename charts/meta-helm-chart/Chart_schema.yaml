@@ -16,6 +16,6 @@ kubeVersion: str(required=False)
 annotations: map(str(), str(), required=False)
 ---
 maintainer:
-  name: str(required=False)
-  email: str(required=False)
+  name: str(required=True)
+  email: str(required=True)
   url: str(required=False)

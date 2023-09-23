@@ -2,11 +2,6 @@ apiVersion: v2
 name: meta-helm-chart
 description: A Helm chart for Kubernetes
 
-mantainers:
-  - name: Eduardo Moreno
-    email: edu.m.guirao@gmail.com
-  - name: Diego Cristóbal
-    email: diecristher@gmail.com
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -22,6 +17,12 @@ type: application
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.0.1
 
+maintainers: # (optional)
+  - name: Eduardo Moreno
+    email: edu.m.guirao@gmail.com
+  - name: Diego Cristóbal
+    email: diecristher@gmail.com
+    url: dcristobalhMad.github.io
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
