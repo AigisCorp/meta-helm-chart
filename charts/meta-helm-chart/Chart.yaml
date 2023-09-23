@@ -2,6 +2,11 @@ apiVersion: v2
 name: meta-helm-chart
 description: A Helm chart for Kubernetes
 
+mantainers:
+  - name: Eduardo Moreno
+    email: edu.m.guirao@gmail.com
+  - name: Diego Cristóbal
+    email: diecristher@gmail.com
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
