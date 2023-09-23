@@ -2,9 +2,26 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+fullnameOverride: "chart-without-values"
+
 replicaCount: 0
 
-deployments: {}
+deployments:
+  - name: deployment-without-values
+    replicas: 1
+    image:
+      repository: nginx
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: ""
+    imagePullSecrets: []
+    podAnnotations: {}
+    podSecurityContext: {}
+    securityContext: {}
+    resources: {}
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
 
 image:
   repository: nginx
@@ -41,7 +58,7 @@ securityContext:
   # runAsUser: 1000
 
 service:
-  enabled: false
+  enabled: true
 
 ingress:
   enabled: false
