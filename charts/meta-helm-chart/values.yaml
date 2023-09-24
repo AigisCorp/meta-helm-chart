@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+deployments: {}
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
