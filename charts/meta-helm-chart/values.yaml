@@ -17,11 +17,25 @@ fullnameOverride: ""
 deployments:
   - name: deployment-example
     replicas: 1
-    image:
-      repository: nginx
-      pullPolicy: IfNotPresent
-      # Overrides the image tag whose default is the chart appVersion.
-      tag: ""
+    containers:
+      - name: nginx
+        image:
+          repository: nginx
+          pullPolicy: IfNotPresent
+          # Overrides the image tag whose default is the chart appVersion.
+          tag: ""
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
     imagePullSecrets: []
     podAnnotations: {}
     podSecurityContext: {}
