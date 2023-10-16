@@ -46,8 +46,8 @@ jobs:
         if: steps.list-changed.outputs.changed == 'true'
         uses: helm/kind-action@v1.7.0
         with:
-          cluster_name: ${{ kubernetes.version }}
-          node_image: kindest/node:${{ kubernetes.version }}
+          cluster_name: ${{ matrix.kubernetes_version }}
+          node_image: kindest/node:${{ matrix.kubernetes_version }}
 
       - name: Run chart-testing (install)
         if: steps.list-changed.outputs.changed == 'true'
