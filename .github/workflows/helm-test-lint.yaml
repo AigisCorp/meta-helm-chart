@@ -44,14 +44,17 @@ jobs:
     strategy:
       matrix:
         kubernetes_version: ["v1.26.6", "v1.27.3", "v1.28.0"]
-    steps:         
+    steps:        
       - name: Create kind cluster
         if: needs.chart-lint.outputs.chart_changed == 'true'
         uses: helm/kind-action@v1.7.0
         with:
           cluster_name: ${{ matrix.kubernetes_version }}
           node_image: kindest/node:${{ matrix.kubernetes_version }}
-
+          
+      - name: Set up chart-testing
+        uses: helm/chart-testing-action@v2.4.0
+        
       - name: Run chart-testing (install)
         if: needs.chart-lint.outputs.chart_changed == 'true'
         run: ct install --target-branch ${{ github.event.repository.default_branch }}
