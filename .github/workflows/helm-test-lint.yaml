@@ -5,7 +5,6 @@ on: pull_request
 jobs:
   chart-lint:
     runs-on: ubuntu-latest
-    strategy:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
