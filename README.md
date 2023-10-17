@@ -19,7 +19,7 @@ Meta Helm Chart is a versatile Helm chart that simplifies the deployment and con
 
 Helm is a popular package manager for Kubernetes that allows you to define, install, and upgrade even the most complex Kubernetes applications. While Helm provides a powerful templating mechanism, creating Helm charts can still be complex and require expertise.
 
-Meta Helm Chart simplifies this process by allowing you to define your application's configuration using a single `values.yaml` file. You can configure various aspects of your application without the need to create or modify Helm templates. This makes it easy for both beginners and experienced users to deploy Kubernetes applications.
+Meta Helm Chart simplifies this process by allowing you to define your application's configuration using a single `values.yaml` file. You can configure various aspects of your application without creating or modifying Helm templates. This makes it easy for both beginners and experienced users to deploy Kubernetes applications.
 
 ## Features
 
@@ -29,7 +29,7 @@ Meta Helm Chart simplifies this process by allowing you to define your applicati
 
 - **Compatibility**: Works with Helm 3 and can be used with any Kubernetes cluster.
 
-- **Extensible**: You can still leverage Helm's templating capabilities if needed by including custom templates alongside the `values.yaml` file.
+- **Extensible**: You can still leverage Helm's templating capabilities by including custom templates alongside the `values.yaml` file.
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ Meta Helm Chart simplifies this process by allowing you to define your applicati
 
 ## Usage
 
-The primary usage of the Meta Helm Chart is to define and manage your application's configuration in the `values.yaml` file. You can find a sample `values.yaml` file in this repository as a starting point. Modify it according to your application's requirements.
+The primary usage of the Meta Helm Chart is to define and manage your application's configuration in the `values.yaml` file. You can find a sample `values.yaml` file in this repository as a starting point and you can modify it according to your application's requirements.
 
 For advanced users who want to leverage Helm's templating features, you can include custom templates in the Helm chart alongside the `values.yaml` file. These templates can be referenced in your `values.yaml` file, giving you the flexibility to combine the simplicity of `values.yaml` with the power of Helm templates.
 
