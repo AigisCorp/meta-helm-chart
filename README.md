@@ -1,3 +1,6 @@
+![helm-tests](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-test-lint.yaml/badge.svg)
+![helm-release](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-releaser.yaml/badge.svg)
+
 # Meta Helm Chart
 
 Meta Helm Chart is a versatile Helm chart that simplifies the deployment and configuration of Kubernetes applications using only a `values.yaml` file. It is designed to be user-friendly and suitable for a wide range of use cases, making it accessible to everyone.
