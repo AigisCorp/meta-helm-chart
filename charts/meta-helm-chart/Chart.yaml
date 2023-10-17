@@ -5,9 +5,8 @@ type: application
 kubeVersion: ">= 1.26.0 < 1.29.0"
 version: 0.0.1
 maintainers:
-  - name: edumgui
-    email: edu.m.guirao@gmail.com
   - name: dcristobalhMad
-    email: diecristher@gmail.com
-    url: dcristobalhMad.github.io
+    url: https://github.com/dcristobalhMad
+  - name: edumgui
+    url: https://github.com/edumgui
 appVersion: "0.0.1"
