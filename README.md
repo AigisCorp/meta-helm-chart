@@ -35,22 +35,33 @@ Meta Helm Chart simplifies this process by allowing you to define your applicati
 
 1. **Installation**: Ensure you have Helm 3 installed on your system. If not, you can follow the [Helm installation guide](https://helm.sh/docs/intro/install/) to get it set up.
 
-2. **Create your own values.yaml from [this file](example/values.yaml)**:
+2. **Create your own values.yaml from [this file](example/values.yaml)**
 
 3. **Template with your custom values.yaml**:
 
    ```bash
-   helm template meta-helm-chart oci://registry-1.docker.io/aigiscorp/meta-helm-chart --values yourownvalues.yaml
+   helm repo add meta-helm-chart https://aigiscorp.github.io/meta-helm-chart/
+   helm repo update
+   helm template your-chart-name meta-helm-chart/meta-helm-chart --values yourownvalues.yaml
    ```
 
 4. **Install/Upgrade with your custom values.yaml**:
 
    ```bash
-   helm install meta-helm-chart oci://registry-1.docker.io/aigiscorp/meta-helm-chart --values yourownvalues.yaml
+   helm install your-chart-name meta-helm-chart/meta-helm-chart --values yourownvalues.yaml
    ```
 
    ```bash
-   helm upgrade meta-helm-chart oci://registry-1.docker.io/aigiscorp/meta-helm-chart --values yourownvalues.yaml
+   helm upgrade your-chart-name meta-helm-chart/meta-helm-chart --values yourownvalues.yaml
+   ```
+
+4. **Package with your custom values.yaml**:
+
+   ```bash
+   helm pull meta-helm-chart/meta-helm-chart --untar
+   cp yourownvalues.yaml meta-helm-chart/values.yaml
+   mv meta-helm-chart your-chart-name
+   helm package your-chart-name
    ```
 
 ## Usage
