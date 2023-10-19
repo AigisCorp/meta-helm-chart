@@ -35,7 +35,7 @@ Meta Helm Chart simplifies this process by allowing you to define your applicati
 
 1. **Installation**: Ensure you have Helm 3 installed on your system. If not, you can follow the [Helm installation guide](https://helm.sh/docs/intro/install/) to get it set up.
 
-2. **Create your own values.yaml from [this file](example/values.yaml)**
+2. **Create your own values.yaml from [this file](example/values.yaml).**
 
 3. **Template with your custom values.yaml**:
 
