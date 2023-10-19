@@ -1,0 +1,11 @@
+ci/cd:
+  - .github/workflows/*
+
+infrastructure:
+  - "**/*.tf"
+
+documentation:
+  - "**/*.md"
+
+golang:
+  - "**/*.go"
