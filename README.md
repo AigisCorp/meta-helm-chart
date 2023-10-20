@@ -1,5 +1,6 @@
 ![helm-tests](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-test-lint.yaml/badge.svg)
 ![helm-release](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-releaser.yaml/badge.svg)
+[![github-pages](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/pages/pages-build-deployment)
 
 # Meta Helm Chart
 
