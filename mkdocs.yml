@@ -1,0 +1,47 @@
+site_name: Meta Helm Chart
+site_url: https://aigiscorp.github.io/meta-helm-chart
+site_description: Meta Helm Chart project documentation
+repo_name: AigisCorp/meta-helm-chart
+
+repo_url: https://aigiscorp.github.io/meta-helm-chart
+nav:
+  - Home: "index.md"
+  - Introduction: "sections/introduction.md"
+  - Features: "sections/features.md"
+  - Usage: "sections/usage.md"
+  - Getting Started: "sections/getting-started.md"
+plugins:
+  - search:
+      lang: en
+theme:
+  name: material
+  # logo:
+  # favicon: assets/Kubernetes_logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: purple
+      accent: custom
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: purple
+      accent: custom
+  font:
+    code: Roboto Mono
+  features:
+    - header.autohide
+    - navigation.footer
+  icon:
+    repo: fontawesome/brands/github
+  language: en
+markdown_extensions:
+  - attr_list
+
+copyright: Copyright &copy; 2023 AigisCorp
