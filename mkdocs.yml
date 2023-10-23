@@ -15,8 +15,8 @@ plugins:
       lang: en
 theme:
   name: material
-  # logo:
-  # favicon: assets/Kubernetes_logo.png
+  logo: assets/meta-helm-chart_logo.png
+  favicon: assets/meta-helm-chart_logo.png
   palette:
     # Palette toggle for light mode
     - scheme: default
