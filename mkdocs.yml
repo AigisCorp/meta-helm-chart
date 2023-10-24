@@ -16,7 +16,7 @@ plugins:
 theme:
   name: material
   logo: assets/meta-helm-chart_logo.png
-  favicon: assets/meta-helm-chart_logo.png
+  favicon: assets/favicon.ico
   palette:
     # Palette toggle for light mode
     - scheme: default
