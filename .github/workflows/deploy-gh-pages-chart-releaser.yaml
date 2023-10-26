@@ -1,4 +1,4 @@
-name: Deploy gh-pages
+name: Deploy mkdocs and helm releaser
 on:
   push:
     branches:
@@ -19,3 +19,12 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.5.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
