@@ -3,7 +3,7 @@ name: meta-helm-chart
 description: A Helm chart for Kubernetes
 type: application
 kubeVersion: ">= 1.26.0 < 1.29.0"
-version: 0.0.2
+version: 0.0.1
 maintainers:
   - name: dcristobalhMad
     url: https://github.com/dcristobalhMad
