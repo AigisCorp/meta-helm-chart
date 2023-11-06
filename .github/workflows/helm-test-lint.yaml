@@ -58,7 +58,7 @@ jobs:
           node_image: kindest/node:${{ matrix.kubernetes_version }}
           
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.4.0
+        uses: helm/chart-testing-action@v2.6.1
         
       - name: Run chart-testing (install)
         if: needs.chart-lint.outputs.chart_changed == 'true'
