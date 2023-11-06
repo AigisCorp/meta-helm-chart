@@ -1,8 +1,11 @@
-![helm-tests](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-test-lint.yaml/badge.svg)
-
-[![Deploy mkdocs and helm releaser](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/deploy-gh-pages-chart-releaser.yaml/badge.svg)](https://github.com/AigisCorp/meta-helm-chart/actions/workflows/deploy-gh-pages-chart-releaser.yaml)
-
-# Meta Helm Chart
+<h1 align="center">Meta Helm Chart</h1>
+<p align="center">
+<a href="https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-test-lint.yaml"><img src="https://github.com/AigisCorp/meta-helm-chart/actions/workflows/helm-test-lint.yaml/badge.svg" max-width="100%" alt="meta-helm-chart Lint and Test"></a>
+<a href="https://github.com/AigisCorp/meta-helm-chart/actions/workflows/deploy-gh-pages-chart-releaser.yaml"><img src="https://github.com/AigisCorp/meta-helm-chart/actions/workflows/deploy-gh-pages-chart-releaser.yaml/badge.svg" max-width="100%" alt="Deploy mkdocs and helm releaser"></a>
+<br>
+<br>
+<img src="docs/assets/meta-helm-chart_logo.png" width="200" max-width="100%" alt="meta-helm-chart logo">
+</p>
 
 Meta Helm Chart is a versatile Helm chart that simplifies the deployment and configuration of Kubernetes applications using only a `values.yaml` file. It is designed to be user-friendly and suitable for a wide range of use cases, making it accessible to everyone.
 
@@ -15,8 +18,6 @@ Meta Helm Chart is a versatile Helm chart that simplifies the deployment and con
   - [License](#license)
 
 ## Introduction
-
-![meta-helm-chart-logo](docs/assets/meta-helm-chart_logo.png)
 
 Helm is a popular package manager for Kubernetes that allows you to define, install, and upgrade even the most complex Kubernetes applications. While Helm provides a powerful templating mechanism, creating Helm charts can still be complex and require expertise.
 
